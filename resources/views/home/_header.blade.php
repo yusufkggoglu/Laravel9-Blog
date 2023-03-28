@@ -31,31 +31,16 @@
 		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/">Ana Sayfa <span class="sr-only">(current)</span></a>
 			  </li>
 			  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown03">
-						<li><a class="dropdown-item" href="about.html">Our company</a></li>
-						<li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
-					</ul>
+					<a class="nav-link " href="/about" aria-expanded="false">Hakkımızda</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-			   <li class="nav-item"><a class="nav-link" href="project.html">Portfolio</a></li>
-			   <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
-						<li><a class="dropdown-item" href="blog-sidebar.html">Blog with Sidebar</a></li>
-
-						<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-					</ul>
-			  </li>
-			   <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+			   <li class="nav-item"><a class="nav-link" href="/contact">İletişim</a></li>
 			</ul>
 
 			<form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
-			  <a href="contact.html" class="btn btn-solid-border btn-round-full">Get a Quote</a>
+			  <a href="/loginuser" class="btn btn-solid-border btn-round-full">Giriş yap</a>
 			</form>
 		  </div>
 		</div>
