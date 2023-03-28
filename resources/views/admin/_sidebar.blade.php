@@ -32,11 +32,5 @@
                     <span class="menu-title">Comments</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/social">
-                    <i style="color:darkblue" class="mdi mdi-earth menu-icon"></i>
-                    <span class="menu-title">Social</span>
-                </a>
-            </li>
         </ul>
     </nav>

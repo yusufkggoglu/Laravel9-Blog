@@ -16,7 +16,7 @@
                                 <td><a href="/admin/blog/delete/{{$data->id}}"
                                        class="btn btn-danger btn-rounded btn-fw">Delete</a></td>
                             </div>
-                            <form class="form" action="/admin/car/updatestatus/{{$data->id}}" method="post"
+                            <form class="form" action="/admin/blog/updatestatus/{{$data->id}}" method="post"
                                   enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">

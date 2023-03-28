@@ -14,7 +14,7 @@
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown me-1">
                 <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
-                   id="messageDropdown" href="">
+                   id="messageDropdown" href="/admin/message">
                     <i class="mdi mdi-message-text mx-0"></i>
                     <span class="count"></span>
                 </a>
