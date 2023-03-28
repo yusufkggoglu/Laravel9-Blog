@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -14,18 +16,13 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $data = Blog::all();
+        $user = User::all();
         return view('home.index', [
-            
+            'data' => $data,
+            'user' => $user,
         ]);
     }
-
-
-
-
-
-
-
-
 
 
 }
