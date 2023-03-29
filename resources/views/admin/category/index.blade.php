@@ -22,13 +22,13 @@
                                             <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Parent</th>
-                                                <th>Title</th>
-                                                <th>Keywords</th>
-                                                <th>Status</th>
-                                                <th>Edit</th>
-                                                <th>Delete</th>
-                                                <th>Show</th>
+                                                <th>Ana Kategori</th>
+                                                <th>Başlık</th>
+                                                <th>Anahtar Kelime</th>
+                                                <th>Durumu</th>
+                                                <th>Düzelt</th>
+                                                <th>Sil</th>
+                                                <th>Göster</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -41,16 +41,16 @@
                                                     <td>{{$rs->keywords}}</td>
                                                     <td>{{$rs->status}}</td>
                                                     <td><a href="/admin/category/edit/{{$rs->id}}"
-                                                           class="btn btn-primary btn-rounded btn-fw">Edit</a></td>
+                                                           class="btn btn-primary btn-rounded btn-fw">Düzelt</a></td>
                                                     <td style="text-align: center">
                                                         <a class="btn btn-danger btn-rounded btn-fw"
                                                            style="color: white;"
                                                            href="{{route('admin_category_delete',['id'=>$rs->id])}}"
                                                            ,
-                                                           onclick="return confirm('Delete Are You Sure ?')">Delete</a>
+                                                           onclick="return confirm('Delete Are You Sure ?')">Sil</a>
                                                     </td>
                                                     <td><a href="/admin/category/show/{{$rs->id}}"
-                                                           class="btn btn-success btn-rounded btn-fw">Show</a></td>
+                                                           class="btn btn-success btn-rounded btn-fw">Göster</a></td>
                                                 </tr>
                                             @endforeach
                                             </tbody>

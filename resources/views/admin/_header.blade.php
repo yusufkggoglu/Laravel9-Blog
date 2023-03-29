@@ -27,11 +27,11 @@
                    
                         <a href="{{route('admin_setting')}}" class="dropdown-item">
                             <i class="mdi mdi-settings text-primary"></i>
-                            Settings
+                            Ayarlar
                         </a>
                         <a href="{{route('logoutuser')}}" class="dropdown-item">
                             <i class="mdi mdi-logout text-primary"></i>
-                            Logout
+                            Çıkış
                         </a>
                 </div>
             </li>

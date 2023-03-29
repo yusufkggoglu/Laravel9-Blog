@@ -74,6 +74,7 @@
 	</div>
 
 	<div class="col-lg-12">
+	@include('home.messages')
         <form action="{{route('storecomment')}}" method="post">
             @csrf
             <input class="input" type="hidden" name="blog_id" value="{{$data->id}}">

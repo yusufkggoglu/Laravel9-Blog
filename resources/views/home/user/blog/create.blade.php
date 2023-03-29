@@ -43,7 +43,7 @@
                                            placeholder="Description">
                                 </div>
                                 <div class="form-group">
-                                    <label>Image</label>
+                                    <label>Fotoğraf</label>
                                       <input type="file" name="image" class="file-upload-default">
                                 </div>
                                 <div class="form-group">

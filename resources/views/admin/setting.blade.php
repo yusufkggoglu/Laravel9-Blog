@@ -21,7 +21,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link active" id="general-tab" data-bs-toggle="tab"
                                                href="#general"
-                                               role="tab" aria-controls="general" aria-selected="true">General</a>
+                                               role="tab" aria-controls="general" aria-selected="true">Genel</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="smtp-tab" data-bs-toggle="tab" href="#smtp"
@@ -29,15 +29,15 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="social-tab" data-bs-toggle="tab" href="#social"
-                                               role="tab" aria-controls="social" aria-selected="false">Social Media</a>
+                                               role="tab" aria-controls="social" aria-selected="false">Sosyal Medya</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about"
-                                               role="tab" aria-controls="about" aria-selected="false">About Us</a>
+                                               role="tab" aria-controls="about" aria-selected="false">Hakkımızda</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
-                                               role="tab" aria-controls="contact" aria-selected="false">Contact Page</a>
+                                               role="tab" aria-controls="contact" aria-selected="false">İletişim sayfası</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content py-0 px-0">
@@ -49,47 +49,47 @@
 
                                                     <div class="d-flex flex-column justify-content-around">
 
-                                                        <h4 class="card-title">General Settings</h4>
+                                                        <h4 class="card-title">Genel Ayarlar</h4>
                                                         <input type="hidden" id="id" name="id"
                                                                value="{{$data->id}}">
                                                         <div class="form-group">
-                                                            <label for="exampleInputName1">Title</label>
+                                                            <label for="exampleInputName1">Site Başlık</label>
                                                             <input type="text" class="form-control"
                                                                    name="title" value="{{$data->title}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleInputName1">Keywords</label>
+                                                            <label for="exampleInputName1">Anahtar Kelimeler</label>
                                                             <input type="text" class="form-control"
                                                                    name="keywords" value="{{$data->keywords}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleInputName1">Description</label>
+                                                            <label for="exampleInputName1">Açıklama</label>
                                                             <input type="text" class="form-control"
                                                                    name="description"
                                                                    value="{{$data->description}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleInputName1">Company</label>
+                                                            <label for="exampleInputName1">Şirket</label>
                                                             <input type="text" class="form-control"
                                                                    name="company" value="{{$data->company}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleInputName1">Address</label>
+                                                            <label for="exampleInputName1">Adres</label>
                                                             <input type="text" class="form-control"
                                                                    name="address" value="{{$data->address}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleInputName1">Phone</label>
+                                                            <label for="exampleInputName1">Telefon</label>
                                                             <input type="tel" class="form-control"
                                                                    name="phone" value="{{$data->phone}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleInputEmail3">Email address</label>
+                                                            <label for="exampleInputEmail3">Email</label>
                                                             <input type="email" class="form-control"
                                                                    name="email" value="{{$data->email}}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="exampleSelectGender">Status</label>
+                                                            <label for="exampleSelectGender">Durumu</label>
                                                             <select class="form-control" name="status">
                                                                 <option selected>{{$data->status}}</option>
                                                                 <option>True</option>
@@ -97,7 +97,7 @@
                                                             </select>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label>Icon</label>
+                                                            <label>İcon</label>
                                                             <input type="file" name="icon"
                                                                    class="file-upload-default">
                                                             <div class="input-group col-xs-12">
@@ -120,7 +120,7 @@
                                                 <div
                                                     class="d-none d-xl-flex border-md-right flex-grow-1 align-items-left justify-content-left p-3 item">
                                                     <div class="d-flex flex-column justify-content-around">
-                                                        <h4 class="card-title">SMTP E-MAIL SETTINGS</h4>
+                                                        <h4 class="card-title">SMTP E-MAIL Ayarları</h4>
                                                         <div class="form-group">
                                                             <label for="exampleInputName1">SMTP SERVER</label>
                                                             <input type="text" class="form-control"
@@ -134,7 +134,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputPassword4">SMTP
-                                                                Passsword</label>
+                                                                Şifre</label>
                                                             <input type="password" name="smtppassword"
                                                                    class="form-control"
                                                                    id="exampleInputPassword4"
@@ -158,16 +158,11 @@
                                                     <div class="d-flex flex-column justify-content-around">
 
 
-                                                        <h4 class="card-title">SOCIAL MEDIA</h4>
+                                                        <h4 class="card-title">SOSYAL MEDYA</h4>
                                                         <div class="form-group">
                                                             <label for="exampleInputName1">Facebook</label>
                                                             <input type="text" class="form-control"
                                                                    name="facebook" value="{{$data->facebook}}">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputName1">Instagram</label>
-                                                            <input type="text" class="form-control"
-                                                                   name="instagram" value="{{$data->instagram}}">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputName1">Twitter</label>
@@ -184,9 +179,9 @@
                                                 <div
                                                     class="d-none d-xl-flex border-md-right flex-grow-1 align-items-left justify-content-left p-3 item">
                                                     <div class="d-flex flex-column justify-content-around">
-                                                        <h4 class="card-title">About Us</h4>
+                                                        <h4 class="card-title">HAKKIMIZDA</h4>
                                                         <div class="form-group">
-                                                            <label for="exampleTextarea1">About Us</label>
+                                                            <label for="exampleTextarea1">HAKKIMIZDA</label>
                                                             <textarea name="aboutus"
                                                                       class="form-control" id="aboutus"
                                                                       rows="4">{{$data->aboutus}}
@@ -202,9 +197,9 @@
                                                 <div
                                                     class="d-none d-xl-flex border-md-right flex-grow-1 align-items-left justify-content-left p-3 item">
                                                     <div class="d-flex flex-column justify-content-around">
-                                                        <h4 class="card-title">Contact Page</h4>
+                                                        <h4 class="card-title">İLETİŞİM FORMU</h4>
                                                         <div class="form-group">
-                                                            <label for="exampleTextarea1">References</label>
+                                                            <label for="exampleTextarea1">REFERANSLARIM</label>
                                                             <textarea name="contact"
                                                                       class="form-control" id="contactt"
                                                                       rows="4">{{$data->contact}}
@@ -215,8 +210,7 @@
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary col-12">
-                                            Update
-                                            Setting
+                                           AYARLARI GÜNCELLE
                                         </button>
                                     </div>
                                 </div>

@@ -23,13 +23,13 @@
                                             <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Category</th>
-                                                <th>Title</th>
-                                                <th>Image</th>
-                                                <th>Status</th>
-                                                <th>Edit</th>
-                                                <th>Delete</th>
-                                                <th>Show</th>
+                                                <th>Kategori</th>
+                                                <th>Başlok</th>
+                                                <th>Fotoğraf</th>
+                                                <th>Durumu</th>
+                                                <th>Düzelt</th>
+                                                <th>Sil</th>
+                                                <th>Göster</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -46,16 +46,16 @@
                                                     </td>
                                                     <td>{{$rs->status}}</td>
                                                     <td><a href="/user/blog/edit/{{$rs->id}}"
-                                                           class="btn btn-primary btn-rounded btn-fw">Edit</a></td>
+                                                           class="btn btn-primary btn-rounded btn-fw">Düzelt</a></td>
                                                     <td style="text-align: center">
                                                         <a class="btn btn-danger btn-rounded btn-fw"
                                                            style="color: white;"
                                                            href="{{route('user_blog_delete',['id'=>$rs->id])}}"
                                                            ,
-                                                           onclick="return confirm('Delete Are You Sure ?')">Delete</a>
+                                                           onclick="return confirm('Delete Are You Sure ?')">Sil</a>
                                                     </td>
                                                     <td><a href="/user/blog/show/{{$rs->id}}"
-                                                           class="btn btn-success btn-rounded btn-fw">Show</a></td>
+                                                           class="btn btn-success btn-rounded btn-fw">Göster</a></td>
                                                 </tr>
                                             @endforeach
                                             </tbody>

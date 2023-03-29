@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Blogs ')
+@section('title', 'Bloglar ')
 
 @section('content')
 
@@ -12,24 +12,23 @@
                         <div class="card-body">
                             <div class="template-demo">
                                 <div class="card-body">
-                                    <h4 style="font-size: large" class="card-title">Blog List</h4>
+                                    <h4 style="font-size: large" class="card-title">Blog Listesi</h4>
                                     <div class="col-sm-push-6">
-                                        <a href="/admin/blog/create" class="btn btn-md btn-inverse-primary btn-fw">Add
-                                        Blog</a>
+                                        <a href="/admin/blog/create" class="btn btn-md btn-inverse-primary btn-fw">Blog Ekle</a>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
-                                                <th>Category</th>
-                                                <th>Title</th>
-                                                <th>Image</th>
-                                                <th>Status</th>
-                                                <th>Edit</th>
-                                                <th>Delete</th>
-                                                <th>Show</th>
+                                                <th>Kullanıcı</th>
+                                                <th>Kategori</th>
+                                                <th>Başlık</th>
+                                                <th>Fotoğraf</th>
+                                                <th>Durumu</th>
+                                                <th>Düzelt</th>
+                                                <th>Sil</th>
+                                                <th>Göster</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -51,16 +50,16 @@
                                                     </td>
                                                     <td>{{$rs->status}}</td>
                                                     <td><a href="/admin/blog/edit/{{$rs->id}}"
-                                                           class="btn btn-primary btn-rounded btn-fw">Edit</a></td>
+                                                           class="btn btn-primary btn-rounded btn-fw">Düzelt</a></td>
                                                     <td style="text-align: center">
                                                         <a class="btn btn-danger btn-rounded btn-fw"
                                                            style="color: white;"
                                                            href="{{route('admin_blog_delete',['id'=>$rs->id])}}"
                                                            ,
-                                                           onclick="return confirm('Delete Are You Sure ?')">Delete</a>
+                                                           onclick="return confirm('Delete Are You Sure ?')">Sil</a>
                                                     </td>
                                                     <td><a href="/admin/blog/show/{{$rs->id}}"
-                                                           class="btn btn-success btn-rounded btn-fw">Show</a></td>
+                                                           class="btn btn-success btn-rounded btn-fw">Göster</a></td>
                                                 </tr>
                                             @endforeach
                                             </tbody>

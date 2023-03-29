@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','User List ')
+@section('title','Kullanıcı Listesi ')
 
 @section('content')
 
@@ -12,18 +12,18 @@
                         <div class="card-body">
                             <div class="template-demo">
                                 <div class="card-body">
-                                    <h4 style="font-size: large" class="card-title">User List</h4>
+                                    <h4 style="font-size: large" class="card-title">Kullanıcı Listesi</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
+                                                <th>İsim</th>
                                                 <th>Email</th>
-                                                <th>Role</th>
-                                                <th>Status</th>
-                                                <th>Delete</th>
-                                                <th>Show</th>
+                                                <th>Rol</th>
+                                                <th>Durumu</th>
+                                                <th>Sil</th>
+                                                <th>Göster</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -43,11 +43,11 @@
                                                            style="color: white;"
                                                            href="{{route('admin_user_delete',['id'=>$rs->id])}}"
                                                            ,
-                                                           onclick="return confirm('Delete Are You Sure ?')">Delete</a>
+                                                           onclick="return confirm('Delete Are You Sure ?')">Sil</a>
                                                     </td>
                                                     <td><a href="/admin/user/show/{{$rs->id}}"
                                                            class="btn btn-success btn-rounded btn-fw"
-                                                           onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">Show</a>
+                                                           onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">Göster</a>
                                                     </td>
                                                 </tr>
                                             @endforeach

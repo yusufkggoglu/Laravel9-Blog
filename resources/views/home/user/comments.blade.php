@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title','User Comments')
+@section('title','Yorumlarım')
 @section('icon',Storage::url($setting->icon))
 
 
@@ -15,11 +15,11 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Name</th>
+                                    <th>İsim</th>
                                     <th>Blog</th>
                                     <th>Yorum</th>
-                                    <th>Status</th>
-                                    <th>Delete</th>
+                                    <th>Durumu</th>
+                                    <th>Sil</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -38,7 +38,7 @@
                                                style="color: white;"
                                                href="{{route('userpanel_review_destroy',['id'=>$rs->id])}}"
                                                ,
-                                               onclick="return confirm('Delete Are You Sure ?')">Delete</a>
+                                               onclick="return confirm('Delete Are You Sure ?')">Sil</a>
                                         </td>
                                     </tr>
                                 @endforeach

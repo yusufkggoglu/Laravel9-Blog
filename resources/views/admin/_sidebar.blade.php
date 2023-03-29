@@ -11,25 +11,25 @@
             <li class="nav-item">
                 <a class="nav-link" href="/admin/blog">
                     <i style="color:darkblue" class="mdi mdi-car menu-icon"></i>
-                    <span class="menu-title">Blogs</span>
+                    <span class="menu-title">Bloglar</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/admin/category">
                     <i style="color:darkblue" class="mdi mdi-apps menu-icon"></i>
-                    <span class="menu-title">Categories</span>
+                    <span class="menu-title">Kategoriler</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/admin/user">
                     <i style="color:darkblue" class="mdi mdi-account-multiple menu-icon"></i>
-                    <span class="menu-title">Users</span>
+                    <span class="menu-title">Kullanıcılar</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/admin/comment">
                     <i style="color:darkblue" class="mdi mdi-comment-text menu-icon"></i>
-                    <span class="menu-title">Comments</span>
+                    <span class="menu-title">Yorumlar</span>
                 </a>
             </li>
         </ul>
