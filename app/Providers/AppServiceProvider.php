@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Pagination\Paginator;
+use App\Models\Setting;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +27,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Paginator::useBootstrap();
+
+        // Use following code if you prefer to create a class
+        // Based view composer otherwise use callback
+        View::composer('post.list', PostComposer::class);
+        View::composer('*', function ($view) {
+            $setting = Setting::first();
+            $view->with('setting',  $setting);
+        });
     }
 }

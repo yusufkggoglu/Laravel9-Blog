@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('blog_id');
-            $table->string('comment',100)->nullable();
+            $table->text('comment')->nullable();
+            $table->string('email',40)->nullable();
             $table->string('ip',20)->nullable();
             $table->string('status',5)->nullable()->default('New');
             $table->timestamps();

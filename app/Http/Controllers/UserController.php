@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class AdminCommentController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,19 @@ class AdminCommentController extends Controller
      */
     public function index()
     {
-        $data= Comment::all();
-        return view('admin.comment.index',[
-            'data'=>$data
+        return view('home.user.index');
+    }
+    public function reviewdestroy($id)
+    {
+        $data=Comment::find($id);;
+        $data->delete();
+        return redirect(route('userpanel_reviews'));
+    }
+    public function reviews()
+    {
+        $comments=Comment::where('user_id','=',Auth::id())->get();
+        return view('home.user.comments',[
+            'comments'=>$comments,
         ]);
     }
 
@@ -50,10 +60,7 @@ class AdminCommentController extends Controller
      */
     public function show($id)
     {
-        $data= Comment::find($id);
-        return view('admin.comment.show',[
-            'data'=>$data
-        ]);
+        //
     }
 
     /**
@@ -76,10 +83,7 @@ class AdminCommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data=Comment::find($id);
-        $data->status="True";
-        $data->save();
-        return redirect(route('admin_comment_show',['id'=>$data->id]));
+        //
     }
 
     /**
@@ -90,8 +94,6 @@ class AdminCommentController extends Controller
      */
     public function destroy($id)
     {
-        $data=Comment::find($id);;
-        $data->delete();
-        return redirect(route('admin_comment_index'));
+        //
     }
 }

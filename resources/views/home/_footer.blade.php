@@ -3,65 +3,37 @@
 	<div class="cta-block-2 bg-gray p-5 rounded border-1">
 		<div class="row justify-content-center align-items-center ">
 			<div class="col-lg-7">
-				<span class="text-color">For Every type business</span>
-				<h2 class="mt-2 mb-4 mb-lg-0">Entrust Your Project to Our Best Team of Professionals</h2>
+				<h2 class="mt-2 mb-4 mb-lg-0">Bir adım uzağındayız , Herhangi bir sorununuzda bizimle iletişime geçebilirsiniz ... </h2>
 			</div>
 			<div class="col-lg-4">
-				<a href="contact.html" class="btn btn-main btn-round-full float-lg-right ">Contact Us</a>
+				<a href="/about" class="btn btn-main btn-round-full float-lg-right ">İletişim</a>
 			</div>
 		</div>
 	</div>
 </div>
-
 </section>
-
 <!-- footer Start -->
 <footer class="footer section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="widget">
-					<h4 class="text-capitalize mb-4">Company</h4>
+					<h4 class="text-capitalize mb-4">{{$setting->title}}</h4>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li><a href="/">Anasayfa</a></li>
+						<li><a href="/about">Hakkımızda</a></li>
+						<li><a href="/contact">İletişim</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-2 col-md-6 col-sm-6">
-				<div class="widget">
-					<h4 class="text-capitalize mb-4">Quick Links</h4>
-
-					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="widget">
-					<h4 class="text-capitalize mb-4">Subscribe Us</h4>
-					<p>Subscribe to get latest news article and resources  </p>
-
-					<form action="#" class="sub-form">
-						<input type="text" class="form-control mb-3" placeholder="Subscribe Now ...">
-						<a href="#" class="btn btn-main btn-small">subscribe</a>
-					</form>
-				</div>
-			</div>
-
 			<div class="col-lg-3 ml-auto col-sm-6">
 				<div class="widget">
 					<div class="logo mb-4">
 						<h3>Mega<span>kit.</span></h3>
 					</div>
-					<h6><a href="tel:+23-345-67890" >Support@megakit.com</a></h6>
-					<a href="mailto:support@gmail.com"><span class="text-color h4">+23-456-6588</span></a>
+					<h6><a href="mailto:{{$setting->email}}" >{{$setting->email}}</a></h6>
+					<a href="tel:+9{{$setting->phone}}"><span class="text-color h4">+{{$setting->phone}}</span></a>
 				</div>
 			</div>
 		</div>
@@ -70,20 +42,13 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-12 col-sm-12">
 					<div class="copyright">
-						&copy; Copyright Reserved to <span class="text-color">Megakit.</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-12 col-sm-12">
-					<div class="copyright">
-					Distributed by  <a href="https://themewagon.com/" target="_blank">Themewagon</a>
+						&copy; Copyright Reserved to <span class="text-color">Yusuf K.</span>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12 text-left text-lg-left">
 					<ul class="list-inline footer-socials">
-						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="ti-facebook mr-2"></i>Facebook</a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="ti-twitter mr-2"></i>Twitter</a></li>
-						<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="ti-linkedin mr-2 "></i>Linkedin</a></li>
+						<li class="list-inline-item"><a href="{{$setting->facebook}}"><i class="ti-facebook mr-2"></i>Facebook</a></li>
+						<li class="list-inline-item"><a href="{{$setting->twitter}}"><i class="ti-twitter mr-2"></i>Twitter</a></li>
 					</ul>
 				</div>
 			</div>
