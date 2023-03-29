@@ -79,8 +79,12 @@
             <input class="input" type="hidden" name="blog_id" value="{{$data->id}}">
 			<h4 class="mb-4">Yorum yazıp fikirlerinizi paylaşabilirsiniz...</h4>
 			<textarea class="form-control mb-3" name="comment" id="comment" cols="30" rows="5" placeholder="Yorumunu bu alana yazabilirsin ..."></textarea>
-
+			@auth
 			<input class="btn btn-main btn-round-full" type="submit" name="submit" id="submit" value="Gönder">
+             @else
+             <a href="/loginuser" class="btn btn-main">Giriş yap</a>
+			 <a href="/register" class="btn btn-main">Kayıt Ol</a>
+            @endauth
 		</form>
 	</div>
 </div>
