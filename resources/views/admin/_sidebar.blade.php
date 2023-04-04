@@ -4,7 +4,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/admin">
                     <i style="color:darkblue" class="mdi mdi-home menu-icon"></i>
-                    <span class="menu-title">Home</span>
+                    <span class="menu-title">Anasayfa</span>
                 </a>
             </li>
 

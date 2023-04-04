@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $data = Blog::with('category')->simplePaginate(2);
         $category = Category::all();
@@ -53,19 +53,6 @@ class HomeController extends Controller
             'other' => $other,
             'comment' => $comment,
         ]);
-    }
-
-    public function search(Request $request)
-    {
-        // $category = Category::all();
-        // $user = User::all();
-        // $blog = DB::table('blogs')
-        //     ->where('title','like',"%{{$s}}%")->all();
-        // return view('home.search',[
-        //     'user' => $user,
-        //     'category' => $category,
-        //     'blog' => $blog,
-        // ]);
     }
 
     public function about()

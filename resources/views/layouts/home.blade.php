@@ -20,7 +20,10 @@
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="{{asset('assets')}}/plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="{{asset('assets')}}/plugins/slick-carousel/slick/slick-theme.css">
-
+<!--
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+-->
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
   @yield('css')

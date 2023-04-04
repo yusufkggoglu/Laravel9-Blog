@@ -37,7 +37,7 @@
 									<div class="blog-item-meta  py-1 px-2">
 										<span class="text-muted text-capitalize mr-3"><i class="ti-pencil-alt mr-2"></i>{{$category->title}}</span>
 									</div> 
-									<h3 class="mt-3 mb-3"><a href="blog-single.html">{{$rs->title}}</a></h3>
+									<h3 class="mt-3 mb-3"><a href="{{route('blog',['id'=>$rs->id])}}">{{$rs->title}}</a></h3>
 									<p class="mb-4"><?php echo substr($rs->description,0,100)   ?>...</p>
 									<a href="{{route('blog',['id'=>$rs->id])}}" class="btn btn-small btn-main btn-round-full">Daha Fazla</a>
 								</div>
@@ -50,8 +50,8 @@
                 <div class="sidebar-wrap">
 					<div class="sidebar-widget search card p-4 mb-3 border-0">
 					<form action="{{route('search')}}">
-						<input type="text" name="s" class="form-control" placeholder="Ara" required>
-						<button type="submit" class="btn btn-primary">Ara</button>
+						<input type="text" name="search" id="search" class="form-control" placeholder="Ara" required>
+						<!--<button type="submit" class="btn btn-primary">Ara</button> -->
 					</form>
 					</div>
 					<div class="sidebar-widget bg-white rounded tags p-4 mb-3">
