@@ -49,7 +49,7 @@
             <div class="col-lg-4">
                 <div class="sidebar-wrap">
 					<div class="sidebar-widget search card p-4 mb-3 border-0">
-					<form action="{{route('search')}}">
+					<form action="">
 						<input type="text" name="search" id="search" class="form-control" placeholder="Ara" required>
 						<!--<button type="submit" class="btn btn-primary">Ara</button> -->
 					</form>
