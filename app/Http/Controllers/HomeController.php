@@ -46,8 +46,7 @@ class HomeController extends Controller
         $comment = Comment::where('blog_id',$id)->where('status','True')->get();
         $user = User::all();
         $data = Blog::find($id);
-        $other = Blog::with('category')->simplePaginate(2);
-        //$carlist2 = Car::limit(6)->get();
+        $other = Blog::limit(6)->get();
         return view('home.blog', [
             'data' => $data,
             'user' => $user,

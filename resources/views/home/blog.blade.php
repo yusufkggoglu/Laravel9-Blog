@@ -18,16 +18,13 @@
           <ul class="list-inline">
             <li class="list-inline-item"><a href="/" class="text-white">Anasayfa</a></li>
             <li class="list-inline-item"><span class="text-white">/</span></li>
-            <li class="list-inline-item"><a href="{{route('blog',['id'=>$data->id])}}" class="text-white-50">{{$data->title}}</a></li>
+            <li class="list-inline-item"><a href="{{route('blog',['id'=>$data->id])}}" class="text-white">{{$data->title}}</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-
 <section class="section blog-wrap bg-gray">
     <div class="container">
         <div class="row">
@@ -35,28 +32,26 @@
                 <div class="row">
 	<div class="col-lg-12 mb-5">
 		<div class="single-blog-item">
-			<img src="images/blog/2.jpg" alt="" class="img-fluid rounded">
-
+			<img src="{{Storage::url($data->image)}}" alt="" class="img-fluid rounded">
 			<div class="blog-item-content bg-white p-5">
 				<div class="blog-item-meta bg-gray py-1 px-2">
 					<span class="text-muted text-capitalize mr-3"><i class="ti-pencil-alt mr-2"></i>{{$data->category->title}}</span>
-					<span class="text-muted text-capitalize mr-3"><i class="ti-comment mr-2"></i>5 Comments</span>
+					<span class="text-muted text-capitalize mr-3"><i class="ti-comment mr-2"></i>({{$comment->count('id')}}) Yorum</span>
 					<span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i>{{$data->created_at}}</span>
 				</div> 
-
-				<h2 class="mt-3 mb-4"><a href="blog-single.html">{{$data->title}}</a></h2>
+				<h2 class="mt-3 mb-4"><a href="{{route('blog',['id'=>$data->id])}}">{{$data->title}}</a></h2>
 				<p>{!!$data->detail!!}</p>
 			</div>
 		</div>
 	</div>
 	<div class="col-lg-12 mb-5">
 		<div class="comment-area card border-0 p-5">
-			<h4 class="mb-4">Yorum ({{$data->comment->count('id')}})</h4>
+			<h4 class="mb-4">Yorum ({{$comment->count('id')}})</h4>
 			<ul class="comment-tree list-unstyled">
                  @foreach($comment as $rs)
 				<li class="mb-5">
 					<div class="comment-area-box">
-						<img alt="" src="images/blog/test1.jpg" class="img-fluid float-left mr-3 mt-2">
+						<img alt="" src="{{asset('assets')}}/images/user.png" style="width: 50px;height: 50px;" class="img-fluid float-left mr-3 mt-2">
 
 						<h5 class="mb-1">{{$rs->user->name}}</h5>
 						<span>Turkey</span>
@@ -114,7 +109,7 @@
 		<h5>Diğer gönderiler</h5>
          @foreach($other as $rs)
         <div class="media border-bottom py-3">
-            <a href="{{route('blog',['id'=>$rs->id])}}"><img class="mr-4" src="images/blog/bt-3.jpg" alt=""></a>
+            <a href="{{route('blog',['id'=>$rs->id])}}"><img class="mr-4" src="" alt=""></a>
             <div class="media-body">
                 <h6 class="my-2"><a href="{{route('blog',['id'=>$rs->id])}}">{{$rs->title}}</a></h6>
                 <span class="text-sm text-muted">{{$rs->created_at}}</span>

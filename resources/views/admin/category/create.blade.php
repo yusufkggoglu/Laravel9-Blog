@@ -38,17 +38,6 @@
                                            placeholder="Description">
                                 </div>
                                 <div class="form-group">
-                                    <label>Fotoğraf</label>
-                                    <input type="file" name="image" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled
-                                               placeholder="Choose Image File">
-                                        <div class="custom-file">
-                                            <input type="file" name="image" class="custom-file-input">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                     <label>Durumu</label>
                                     <select class="form-control" name="status">
                                         <option>True</option>

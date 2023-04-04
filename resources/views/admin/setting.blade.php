@@ -35,10 +35,6 @@
                                             <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about"
                                                role="tab" aria-controls="about" aria-selected="false">Hakkımızda</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact"
-                                               role="tab" aria-controls="contact" aria-selected="false">İletişim sayfası</a>
-                                        </li>
                                     </ul>
                                     <div class="tab-content py-0 px-0">
                                         <div class="tab-pane fade show active" id="general" role="tabpanel"
@@ -185,24 +181,6 @@
                                                             <textarea name="aboutus"
                                                                       class="form-control" id="aboutus"
                                                                       rows="4">{{$data->aboutus}}
-                                                            </textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="contact" role="tabpanel"
-                                             aria-labelledby="contact-tab">
-                                            <div class="d-flex flex-wrap justify-content-xl-between">
-                                                <div
-                                                    class="d-none d-xl-flex border-md-right flex-grow-1 align-items-left justify-content-left p-3 item">
-                                                    <div class="d-flex flex-column justify-content-around">
-                                                        <h4 class="card-title">İLETİŞİM FORMU</h4>
-                                                        <div class="form-group">
-                                                            <label for="exampleTextarea1">REFERANSLARIM</label>
-                                                            <textarea name="contact"
-                                                                      class="form-control" id="contactt"
-                                                                      rows="4">{{$data->contact}}
                                                             </textarea>
                                                         </div>
                                                     </div>

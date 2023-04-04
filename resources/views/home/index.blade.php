@@ -30,37 +30,37 @@
             <div class="col-lg-8">
                 <div class="row">
 					@foreach($data as $rs)
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/1.jpg" alt="" class="img-fluid rounded">
-			<div class="blog-item-content bg-white p-4">
-				<div class="blog-item-meta  py-1 px-2">
-					<span class="text-muted text-capitalize mr-3"><i class="ti-pencil-alt mr-2"></i>{{$rs->category->title}}</span>
-				</div> 
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">{{$rs->title}}</a></h3>
-				<p class="mb-4"><?php echo substr($rs->description,0,100)   ?>...</p>
-				<a href="{{route('blog',['id'=>$rs->id])}}" class="btn btn-small btn-main btn-round-full">Daha Fazla</a>
-			</div>
-		</div>
-	</div>
-	@endforeach
-</div>
+						<div class="col-lg-6 col-md-6 mb-5">
+							<div class="blog-item">
+								<img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid rounded">
+								<div class="blog-item-content bg-white p-4">
+									<div class="blog-item-meta  py-1 px-2">
+										<span class="text-muted text-capitalize mr-3"><i class="ti-pencil-alt mr-2"></i>{{$rs->category->title}}</span>
+									</div> 
+									<h3 class="mt-3 mb-3"><a href="blog-single.html">{{$rs->title}}</a></h3>
+									<p class="mb-4"><?php echo substr($rs->description,0,100)   ?>...</p>
+									<a href="{{route('blog',['id'=>$rs->id])}}" class="btn btn-small btn-main btn-round-full">Daha Fazla</a>
+								</div>
+							</div>
+						</div>
+					@endforeach
+				</div>
             </div>
             <div class="col-lg-4">
                 <div class="sidebar-wrap">
-	<div class="sidebar-widget search card p-4 mb-3 border-0">
-	<form action="{{route('search')}}">
-		<input type="text" name="s" class="form-control" placeholder="Ara" required>
-		<button type="submit" class="btn btn-primary">Ara</button>
-	</form>
-	</div>
-	<div class="sidebar-widget bg-white rounded tags p-4 mb-3">
-		<h5 class="mb-4">Kategoriler</h5>
-		@foreach($category as $rs)
-			<a href="{{route('categoryblogs',['id'=>$rs->id ,'slug'=>$rs->title])}}">{{$rs->title}}</a>
-		@endforeach
-	</div>
-</div>
+					<div class="sidebar-widget search card p-4 mb-3 border-0">
+					<form action="{{route('search')}}">
+						<input type="text" name="s" class="form-control" placeholder="Ara" required>
+						<button type="submit" class="btn btn-primary">Ara</button>
+					</form>
+					</div>
+					<div class="sidebar-widget bg-white rounded tags p-4 mb-3">
+						<h5 class="mb-4">Kategoriler</h5>
+						@foreach($category as $rs)
+							<a href="{{route('categoryblogs',['id'=>$rs->id ,'slug'=>$rs->title])}}">{{$rs->title}}</a>
+						@endforeach
+					</div>
+				</div>
             </div>   
         </div>
         <div class="row mt-5">
@@ -73,5 +73,20 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="mt-70 position-relative">
+	<div class="container">
+	<div class="cta-block-2 bg-white p-5 rounded border-1">
+		<div class="row justify-content-center align-items-center ">
+			<div class="col-lg-7">
+				<h2 class="mt-2 mb-4 mb-lg-0">Bir adım uzağındayız , Herhangi bir sorununuzda bizimle iletişime geçebilirsiniz ... </h2>
+			</div>
+			<div class="col-lg-4">
+				<a href="/about" class="btn btn-main btn-round-full float-lg-right ">İletişim</a>
+			</div>
+		</div>
+	</div>
+</div>
 </section>
 @endsection

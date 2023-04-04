@@ -1,17 +1,3 @@
-<section class="mt-70 position-relative">
-	<div class="container">
-	<div class="cta-block-2 bg-gray p-5 rounded border-1">
-		<div class="row justify-content-center align-items-center ">
-			<div class="col-lg-7">
-				<h2 class="mt-2 mb-4 mb-lg-0">Bir adım uzağındayız , Herhangi bir sorununuzda bizimle iletişime geçebilirsiniz ... </h2>
-			</div>
-			<div class="col-lg-4">
-				<a href="/about" class="btn btn-main btn-round-full float-lg-right ">İletişim</a>
-			</div>
-		</div>
-	</div>
-</div>
-</section>
 <!-- footer Start -->
 <footer class="footer section">
 	<div class="container">
@@ -30,7 +16,7 @@
 			<div class="col-lg-3 ml-auto col-sm-6">
 				<div class="widget">
 					<div class="logo mb-4">
-						<h3>Mega<span>kit.</span></h3>
+						<h3>YK<span>Blog</span></h3>
 					</div>
 					<h6><a href="mailto:{{$setting->email}}" >{{$setting->email}}</a></h6>
 					<a href="tel:+9{{$setting->phone}}"><span class="text-color h4">+{{$setting->phone}}</span></a>

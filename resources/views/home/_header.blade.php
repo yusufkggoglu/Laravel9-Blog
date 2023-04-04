@@ -20,13 +20,11 @@
 	<nav class="navbar navbar-expand-lg  py-4" id="navbar">
 		<div class="container">
 		  <a class="navbar-brand" href="/">
-		  	Mega<span>kit.</span>
+		  	YK<span>Blog</span>
 		  </a>
-
 		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="fa fa-bars"></span>
 		  </button>
-	  
 		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
@@ -36,28 +34,28 @@
 					<a class="nav-link " href="/about" aria-expanded="false">Hakkımızda</a>
 			  </li>
 			   <li class="nav-item"><a class="nav-link" href="/contact">İletişim</a></li>
-			</ul>
-			@guest()
-			<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle btn btn-solid-border btn-round-full" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giriş</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item " href="/loginuser">Giriş yap</a></li>
-						<li><a class="dropdown-item" href="/registeruser">Kayıt ol</a></li>
-					</ul>
-			</li>
-			@endguest
-			@auth()
-			<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle btn btn-solid-border btn-round-full" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{Auth::user()->name}}</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item " href="/userpanel">Hesabım</a></li>
-						<li><a class="dropdown-item" href="/user/posting">Bloglarım</a></li>
-						<li><a class="dropdown-item" href="{{route('userpanel_reviews')}}">Yaptığım yorumlar</a></li>
-						<li><a class="dropdown-item" href="/logoutuser">Çıkış</a></li>
+				@guest()
+				<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle btn btn-solid-border btn-round-full" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giriş</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown05">
+							<li><a class="dropdown-item " href="/loginuser">Giriş yap</a></li>
+							<li><a class="dropdown-item" href="/registeruser">Kayıt ol</a></li>
+						</ul>
+				</li>
+				@endguest
+				@auth()
+				<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle btn btn-solid-border btn-round-full" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{Auth::user()->name}}</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdown05">
+							<li><a class="dropdown-item " href="/userpanel">Hesabım</a></li>
+							<li><a class="dropdown-item" href="/user/posting">Bloglarım</a></li>
+							<li><a class="dropdown-item" href="{{route('userpanel_reviews')}}">Yaptığım yorumlar</a></li>
+							<li><a class="dropdown-item" href="/logoutuser">Çıkış</a></li>
 
-					</ul>
-			</li>
-			@endauth
+						</ul>
+				</li>
+				@endauth
+			</ul>
 		  </div>
 		</div>
 	</nav>
