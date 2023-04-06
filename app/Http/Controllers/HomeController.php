@@ -15,6 +15,8 @@ use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
 class HomeController extends Controller
 {
     public function index(Request $request)
@@ -64,13 +66,20 @@ class HomeController extends Controller
         return view('home.contact');
     }
     public function storecomment(Request $request)
-    {
+    { 
         $data = new Comment();
         $data->user_id = Auth::id();
         $data->blog_id = $request->input('blog_id');
         $data->comment = $request->input('comment');
         $data->ip = request()->ip();
         $data->save();
+
+        $user = User::find(Auth::id());
+        $blog = Blog::find($request->blog_id);
+        Mail::send("email.comment",['request'=>$request,'user'=>$user,'blog'=>$blog],function ($message) use($request){
+            $message->to("yusufcankggoglu@gmail.com","Yusuf")->subject("Yeni Yorum Geldi !");
+         });
+
         return redirect()->route('blog',['id' => $request->input('blog_id')])->with('success', 'Your Message has been sent , Thank You.');
     }
 
@@ -84,8 +93,13 @@ class HomeController extends Controller
         $data->ip = $request->ip();
         $data->save();
 
+        Mail::send("email.message",['request'=>$request],function ($message) use($request){
+            $message->to("yusufcankggoglu@gmail.com","Yusuf")->subject("Yeni Mesaj Geldi !");
+         });
+         
         return redirect()->route('contact')->with('info', 'Your Message has been sent , Thank You.');
     }
+
     public function loginadmincheck(Request $request)
     {
         $credentials = $request->validate([

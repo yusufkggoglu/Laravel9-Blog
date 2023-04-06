@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+
 
 class UserBlogController extends Controller
 {
@@ -56,6 +59,12 @@ class UserBlogController extends Controller
             $data->image = $request->file('image')->store('images');
         }
         $data->save();
+
+        $user = User::find($request->user_id);
+        Mail::send("email.blog",['request'=>$request,'user'=>$user],function ($message) use($request){
+            $message->to("yusufcankggoglu@gmail.com","Yusuf")->subject("Yeni Blog Geldi !");
+         });
+         
         return redirect('user/posting');
     }
 
