@@ -24,10 +24,6 @@
                                                role="tab" aria-controls="general" aria-selected="true">Genel</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="smtp-tab" data-bs-toggle="tab" href="#smtp"
-                                               role="tab" aria-controls="smtp" aria-selected="false">SMTP E-mail</a>
-                                        </li>
-                                        <li class="nav-item">
                                             <a class="nav-link" id="social-tab" data-bs-toggle="tab" href="#social"
                                                role="tab" aria-controls="social" aria-selected="false">Sosyal Medya</a>
                                         </li>
@@ -106,40 +102,6 @@
                                                                            class="custom-file-input">
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="smtp" role="tabpanel" aria-labelledby="smtp-tab">
-                                            <div class="d-flex flex-wrap justify-content-xl-between">
-                                                <div
-                                                    class="d-none d-xl-flex border-md-right flex-grow-1 align-items-left justify-content-left p-3 item">
-                                                    <div class="d-flex flex-column justify-content-around">
-                                                        <h4 class="card-title">SMTP E-MAIL Ayarları</h4>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputName1">SMTP SERVER</label>
-                                                            <input type="text" class="form-control"
-                                                                   name="smtpserver" value="{{$data->smtpserver}}">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputEmail3">SMTP E-mail</label>
-                                                            <input type="email" name="smtpemail"
-                                                                   class="form-control" id="exampleInputEmail3"
-                                                                   value="{{$data->email}}">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputPassword4">SMTP
-                                                                Şifre</label>
-                                                            <input type="password" name="smtppassword"
-                                                                   class="form-control"
-                                                                   id="exampleInputPassword4"
-                                                                   value="{{$data->password}}">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputName1">SMTP Port</label>
-                                                            <input type="number" class="form-control"
-                                                                   name="smtpport" value="{{$data->smtpport}}">
                                                         </div>
                                                     </div>
                                                 </div>

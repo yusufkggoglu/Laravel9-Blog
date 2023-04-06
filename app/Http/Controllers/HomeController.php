@@ -19,7 +19,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $data = Blog::with('category')->simplePaginate(2);
+        $data = Blog::with('category')->where('status','True')->simplePaginate(2);
         $category = Category::all();
         $user = User::all();
         return view('home.index', [
@@ -33,7 +33,7 @@ class HomeController extends Controller
     {
         $categories = Category::all();
         $category = Category::find($id);
-        $blogs = DB::table('blogs')->where('category_id', $id)->simplePaginate(2);
+        $blogs = DB::table('blogs')->where('category_id', $id)->where('status','True')->simplePaginate(2);
         return view('home.blogcategory', [
             'category' => $category,
             'blogs' => $blogs,
@@ -46,7 +46,7 @@ class HomeController extends Controller
         $comment = Comment::where('blog_id',$id)->where('status','True')->get();
         $user = User::all();
         $data = Blog::find($id);
-        $other = Blog::limit(6)->get();
+        $other = Blog::limit(6)->where('status','True')->get();
         return view('home.blog', [
             'data' => $data,
             'user' => $user,

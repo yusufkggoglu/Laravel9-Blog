@@ -18,7 +18,6 @@
                             <form class="form" action="/admin/blog/update/{{$data->id}}" method="post"
                                   enctype="multipart/form-data">
                                 @csrf
-                                <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::id()}}">
 
                                 <div class="form-group">
                                     <label>Kategori</label>

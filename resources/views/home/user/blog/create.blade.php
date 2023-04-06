@@ -65,7 +65,6 @@
                                 <div class="form-group">
                                     <label>Durumu</label>
                                     <select class="form-control" name="status">
-                                        <option>True</option>
                                         <option>False</option>
                                     </select>
                                 </div>

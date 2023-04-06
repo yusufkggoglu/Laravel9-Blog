@@ -56,7 +56,6 @@
                                     <label>Durumu</label>
                                     <select class="form-control" name="status">
                                         <option selected>{{$data->status}}</option>
-                                        <option>True</option>
                                         <option>False</option>
                                     </select>
                                 </div>
